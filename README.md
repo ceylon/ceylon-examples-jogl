@@ -20,11 +20,7 @@ required by JOGL. In this directory, type:
 
     mvn dependency:resolve
 
-Next, compile the example with `ceylonb`:
-
-    ./ceylonb compile
-
-Finally, run it using:
+Next, run the example with `ceylonb`:
 
     ./ceylonb run
 

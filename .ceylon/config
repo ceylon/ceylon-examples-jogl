@@ -5,6 +5,7 @@ resource=resource
 
 [runtool]
 module=joggly
+compile=check
 
 [defaults]
 encoding=UTF-8
