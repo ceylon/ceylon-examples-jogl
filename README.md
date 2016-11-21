@@ -7,7 +7,9 @@ courtesy of [JOGL].
 
 ## Requirements
 
-Ceylon 1.3.1 or Ceylon IDE 1.3.1 is required.
+Ceylon 1.3.1 or Ceylon IDE 1.3.1 is required to compile and
+run this example. On the command line you can use the provided
+`ceylonb` command if you don't have Ceylon already installed.
 
 Maven is also required.
 
@@ -18,7 +20,7 @@ required by JOGL. In this directory, type:
 
     mvn dependency:resolve
 
-Next, compile the example with `ceylon`:
+Next, compile the example with `ceylonb`:
 
     ./ceylonb compile
 
