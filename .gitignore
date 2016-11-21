@@ -1,3 +1,5 @@
 /modules/
 /.exploded/
 /classes/
+.idea/libraries
+.idea/workspace.xml

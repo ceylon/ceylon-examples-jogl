@@ -7,3 +7,5 @@ resource=resource
 encoding=UTF-8
 flatclasspath=true
 autoexportmavendependencies=false
+fullyexportmavendependencies=false
+offline=false
