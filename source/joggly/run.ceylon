@@ -22,7 +22,17 @@ shared void run() {
     
     value red = [1.0, 0.0, 0.0];
     value green = [0.0, 1.0, 0.0];
-    value blue = [0.0, 0.5, 1.0];
+    value blue = [0.0, 0.0, 1.0];
+
+    value tip = [0.0, 0.5, 0.0];
+    value left = [-0.5, -0.5, 0.0];
+    value right = [0.5, -0.5, 0.0];
+
+    value triangle = [
+        left -> red,
+        right -> green,
+        tip -> blue
+    ];
     
     value glprofile = GLProfile.getDefault(null);
     value glcapabilities = GLCapabilities(glprofile);
@@ -32,20 +42,16 @@ shared void run() {
     glcanvas.addGLEventListener(object satisfies GLEventListener {
         shared actual void display(GLAutoDrawable drawable) {
             value gl = drawable.gl.gl2;
-            
+
             gl.glBegin(GL2.glTriangles);
-            
-            gl.glVertex3f(0.0, 0.5, 0.0); //tip
-            
-            gl.glColor3f(*red); 
-            gl.glVertex3f(-0.5, -0.5, 0.0); //left edge 
-            
-            gl.glColor3f(*green); 
-            gl.glVertex3f(0.5, -0.5, 0.0); //base 
-            
-            gl.glColor3f(*blue); 
-            gl.glVertex3f(0.0, 0.0, 0.0); //right edge 
-            
+
+            gl.glVertex3f(*tip);
+
+            for (point -> color in triangle) {
+                gl.glColor3f(*color);
+                gl.glVertex3f(*point);
+            }
+
             gl.glEnd();         
             
         }
