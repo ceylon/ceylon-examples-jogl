@@ -28,3 +28,10 @@ Finally, run it using:
 
 Alternatively, simply import the project into Ceylon IDE and
 run it from within the IDE.
+
+## Gotcha: native library jar files
+
+Ceylon's Maven integration does not yet automatically 
+download the JNI native libraries required by JOGL. 
+Therefore it is necessary to use Maven for this. For more
+information see <https://jogamp.org/wiki/index.php/Maven>.
