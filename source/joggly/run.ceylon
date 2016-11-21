@@ -33,41 +33,37 @@ shared void run() {
         right -> green,
         tip -> blue
     ];
-    
+
+    void drawTriangle(GLAutoDrawable drawable) {
+        value gl = drawable.gl.gl2;
+
+        gl.glBegin(GL2.glTriangles);
+
+        gl.glVertex3f(*tip);
+
+        for (point -> color in triangle) {
+            gl.glColor3f(*color);
+            gl.glVertex3f(*point);
+        }
+
+        gl.glEnd();
+    }
+
     value glprofile = GLProfile.getDefault(null);
     value glcapabilities = GLCapabilities(glprofile);
     value glcanvas = GLCanvas(glcapabilities);
     glcanvas.setSize(400, 400);
-    
     glcanvas.addGLEventListener(object satisfies GLEventListener {
-        shared actual void display(GLAutoDrawable drawable) {
-            value gl = drawable.gl.gl2;
-
-            gl.glBegin(GL2.glTriangles);
-
-            gl.glVertex3f(*tip);
-
-            for (point -> color in triangle) {
-                gl.glColor3f(*color);
-                gl.glVertex3f(*point);
-            }
-
-            gl.glEnd();         
-            
-        }
-        shared actual void reshape(GLAutoDrawable drawable, 
-            Integer x, Integer y, 
-            Integer width, Integer height) {}
-        shared actual void init(GLAutoDrawable drawable) {}
-        shared actual void dispose(GLAutoDrawable drawable) {}
+        display(GLAutoDrawable drawable) => drawTriangle(drawable);
+        reshape = noop;
+        init = noop;
+        dispose = noop;
     });
     
     value jframe = JFrame("Hello JOGL");
-    
     jframe.addWindowListener(object extends WindowAdapter() {
         windowClosing(WindowEvent e) => jframe.dispose();
     });
-    
     jframe.contentPane.add(glcanvas);
     jframe.setSize(600, 400);
     jframe.setVisible(true);
