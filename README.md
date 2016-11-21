@@ -20,11 +20,11 @@ required by JOGL. In this directory, type:
 
 Next, compile the example with `ceylon`:
 
-    ceylon compile
+    ./ceylonb compile
 
 Finally, run it using:
 
-    ceylon run joggly
+    ./ceylonb run
 
 Alternatively, simply import the project into Ceylon IDE and
 run it from within the IDE.

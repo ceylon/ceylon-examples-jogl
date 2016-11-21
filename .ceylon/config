@@ -3,6 +3,9 @@
 source=source
 resource=resource
 
+[runtool]
+module=joggly
+
 [defaults]
 encoding=UTF-8
 flatclasspath=true
