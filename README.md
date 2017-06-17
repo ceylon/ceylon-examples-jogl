@@ -7,15 +7,17 @@ courtesy of [JOGL][].
 
 ## Requirements
 
-Ceylon 1.3.3 or Ceylon IDE 1.3.3 is required.
+Ceylon 1.3.3 or Ceylon IDE 1.3.3 is required to compile and
+run this example. On the command line you can use the provided
+`ceylonb` command if you don't have Ceylon already installed.
 
 ## Compiling and running
 
-Compile the example with `ceylon`:
+Compile the example with `ceylon` or `ceylonb`:
 
     ./ceylonb compile
 
-Finally, run it using:
+Next, run the example with `ceylon` or `ceylonb`:
 
     ./ceylonb run
 
