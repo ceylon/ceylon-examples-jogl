@@ -13,3 +13,4 @@ flatclasspath=true
 autoexportmavendependencies=false
 fullyexportmavendependencies=false
 offline=false
+overrides=overrides.xml

@@ -1,0 +1,43 @@
+<overrides xmlns="http://www.ceylon-lang.org/xsd/overrides">
+
+    <define name="version" value="2.3.2"/>
+
+    <define name="mac" value="natives-macosx-universal"/>
+    <define name="linux" value="natives-linux-i586"/>
+    <define name="windows" value="natives-windows-i586"/>
+
+    <!--
+        Specify all native dependencies here.
+
+        Note: we could have done it in module.ceylon, and
+        we would not have needed this overrides file.
+    -->
+
+    <add groupId="org.jogamp.jogl"
+         artifactId="jogl-all"
+         version="${version}"
+         classifier="${mac}"/>
+    <add groupId="org.jogamp.gluegen"
+         artifactId="gluegen-rt"
+         version="${version}"
+         classifier="${mac}"/>
+
+    <add groupId="org.jogamp.jogl"
+         artifactId="jogl-all"
+         version="${version}"
+         classifier="${linux}"/>
+    <add groupId="org.jogamp.gluegen"
+         artifactId="gluegen-rt"
+         version="${version}"
+         classifier="${linux}"/>
+
+    <add groupId="org.jogamp.jogl"
+         artifactId="jogl-all"
+         version="${version}"
+         classifier="${windows}"/>
+    <add groupId="org.jogamp.gluegen"
+         artifactId="gluegen-rt"
+         version="${version}"
+         classifier="${windows}"/>
+
+</overrides>
