@@ -3,3 +3,5 @@
 /classes/
 .idea/libraries
 .idea/workspace.xml
+joggly-*.jar
+joggly-*.cas

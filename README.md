@@ -23,3 +23,25 @@ Next, run the example with `ceylon` or `ceylonb`:
 
 Alternatively, simply import the project into Ceylon IDE and
 run it from within the IDE.
+
+## Assembling a fat jar
+
+Assemble a "fat" jar containing the example module with 
+all its dependencies with `ceylon` or `ceylonb`:
+
+    ./ceylonb fat-jar joggly
+
+Now, run the fat jar using `java`:
+
+    java -jar joggly-1.0.0.jar
+
+## Packaging a Ceylon assembly archive
+
+Package the example module as a `.cas` assembly archive 
+using `ceylon` or `ceylonb`:
+
+    ./ceylonb assemble joggly
+
+And then run it using `ceylon` or `ceylonb`:
+
+    ./ceylonb run -a joggly-1.0.0.cas
