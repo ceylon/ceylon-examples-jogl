@@ -1,4 +1,6 @@
-<overrides xmlns="http://www.ceylon-lang.org/xsd/overrides">
+<overrides xmlns="http://www.ceylon-lang.org/xsd/overrides"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.ceylon-lang.org/xsd/overrides http://www.ceylon-lang.org/xsd/overrides">
 
     <define name="version" value="2.3.2"/>
 

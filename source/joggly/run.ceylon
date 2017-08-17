@@ -19,7 +19,7 @@ import javax.swing {
 }
 
 shared void run() {
-    
+
     value red = [1.0, 0.0, 0.0];
     value green = [0.0, 1.0, 0.0];
     value blue = [0.0, 0.0, 1.0];
