@@ -13,11 +13,7 @@ run this example. On the command line you can use the provided
 
 ## Compiling and running
 
-Compile the example with `ceylon` or `ceylonb`:
-
-    ./ceylonb compile
-
-Next, run the example with `ceylon` or `ceylonb`:
+Compile and run the example with `ceylon` or `ceylonb`:
 
     ./ceylonb run
 
@@ -26,8 +22,8 @@ run it from within the IDE.
 
 ## Assembling a fat jar
 
-Assemble a "fat" jar containing the example module with 
-all its dependencies with `ceylon` or `ceylonb`:
+Assemble a "fat" jar containing the example module with all 
+its dependencies with `ceylon` or `ceylonb`:
 
     ./ceylonb fat-jar joggly
 
@@ -37,8 +33,8 @@ Now, run the fat jar using `java`:
 
 ## Packaging a Ceylon assembly archive
 
-Package the example module as a `.cas` assembly archive 
-using `ceylon` or `ceylonb`:
+Package the example module as a `.cas` assembly archive using 
+`ceylon` or `ceylonb`:
 
     ./ceylonb assemble joggly
 
